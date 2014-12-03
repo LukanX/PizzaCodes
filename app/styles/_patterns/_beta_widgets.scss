@@ -1,0 +1,124 @@
+.widget,
+.module {
+  margin-bottom: 1.5em;
+}
+
+.social_box {
+  background: $light-beige;
+  border: 1px solid $beige;
+  padding: 1em 6%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  li {
+    margin: 0 3%;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+  }
+
+  .twttr {
+    width: 60px;
+  }
+
+  .fb {
+    width: 48px;
+    height: 61px;
+  }
+
+  .follow-count {
+    font-size: 15px;
+    position: relative;
+    display: block;
+    background: #FFF;
+    color: #000;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: 9px;
+    padding: 8px 2px;
+    line-height: 1;
+    font-family: sans-serif;
+    color: #333;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -5px;
+      border: 5px solid rgba(0, 0, 0, 0);
+      border-top-color: #B9B8B8;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -9px;
+      left: 50%;
+      margin-left: -5px;
+      border: 5px solid rgba(0, 0, 0, 0);
+      border-top-color: #FFF;
+    }
+  }
+}
+
+
+.newsletter {
+  .widget-header {
+    background: $purple;
+    color: $white;
+    text-align: center;
+    padding: 1em;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  form {
+    padding: 1em 6%;
+    border: 1px solid $beige;
+    border-top:0;
+  }
+
+  small {
+    display: block;
+    margin-top: 1.5rem;
+  }
+}
+
+.intlCoupons {
+  background: $light-beige;
+  border: 1px solid $beige;
+  padding: 1em 6%;
+
+  .title {
+    @extend .h4;
+    margin-bottom: 0.5em;
+  }
+
+  .countryList li {
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  a {
+    color: transparent;
+    display: inline-block;
+    height: 20px;
+    width: 30px;
+    overflow: hidden;
+    margin-right: 5px;
+  }
+
+  .cl-uk { background-image: url(/images/flags/uk.jpg); }
+  .cl-de { background-image: url(/images/flags/germany.jpg); }
+  .cl-fr { background-image: url(/images/flags/france.jpg); }
+  .cl-ca { background-image: url(/images/flags/canada.jpg); }
+  .cl-in { background-image: url(/images/flags/india.jpg); }
+  .cl-au { background-image: url(/images/flags/austraila.jpg); }
+  .cl-nl { background-image: url(/images/flags/dutch.jpg); }
+}

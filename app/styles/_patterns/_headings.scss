@@ -1,0 +1,117 @@
+/* Font Sizes
+TODO: Create Basic "Type" Module?
+---------------------------------------------------
+
+h1 - 65px == 4.0625em
+h2 - 44px == 2.75em
+h3 - 36px == 2.25em
+h4 - 28px == 1.75em
+h5 - 24px == 1.5em
+h6 - 20px == 1.25em
+
+Details & Metadata: 15px for details, metadata type stuff
+
+Paragraph Text: 18px & 16px, depending on the application.
+
+Fine Print: 12px
+
+// --------------------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $serif;
+	// CHECK: Confirm font-weight
+	font-weight: 100;
+	font-size: 1.25em;
+	line-height: 1.1;
+	margin-top: 0;
+	color: $black;
+
+	small {
+		font-family: $sans-serif;
+		font-weight: 400;
+		font-size: .6em;
+		color: $beige;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.h1 {
+	font-size: 1.75em; /*28px*/
+	line-height: 1.15em;
+	margin-bottom: 0;
+
+	@include media($breakpoint-500)  { font-size: 2.25em; /*36px*/ }
+	@include media($breakpoint-800)  { font-size: 2.75em; /*44px*/ }
+	@include media($breakpoint-1000) { font-size: 4.0625em; /*65px*/ }
+
+}
+
+
+.h2 {
+	font-size: 1.75em; /*28px*/
+	line-height: 1.7em;
+	margin-bottom: 0;
+
+	@include media($breakpoint-500) { font-size: 2.25em; /*36px*/ }
+	@include media($breakpoint-800) { font-size: 2.75em /*44px*/ }
+}
+
+.h3 {
+	font-size: 1.5em;/*24px*/
+	margin-bottom: 0.5em;
+	line-height: 1.15em;
+
+	@include media($breakpoint-500) { font-size: 1.75em;/*28px*/ }
+	@include media($breakpoint-1000) { font-size: 2.25em; /*36px*/ }
+}
+
+.h4 {
+	font-size: 1.25em; /*20px*/
+	line-height: 1.15em;
+	margin-bottom: 0.5em;
+
+	@include media($breakpoint-800) { font-size: 1.75em; /*28px*/ }
+}
+
+.h5 {
+	font-size: 1.25em;
+	line-height: 1.15em;
+	margin-bottom: 0.5em;
+
+	@include media($breakpoint-800) {
+		font-size: 1.5em;
+	}
+
+}
+
+.h6 {
+	font-size: 1.25em;
+	margin-bottom: 0.5em;
+}
+
+.h-inline {
+		display: inline-block;
+		margin-top:0;
+}
+
+.page-header{
+	border: 1px solid $beige;
+	background: $light-beige;
+	padding: 0 1em;
+	margin-bottom: 2em;
+
+	.title{
+		@extend .h2;
+	}
+}
